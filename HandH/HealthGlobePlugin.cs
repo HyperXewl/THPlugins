@@ -11,9 +11,10 @@ namespace Turbo.Plugins.HandH
         public WorldDecoratorCollection HealthGlobeDecorator { get; set; }
 
         public HealthGlobePlugin()
-		{
+        {
             Enabled = true;
-		}
+        }
+
         public override void Load(IController hud)
         {
             base.Load(hud);
@@ -34,7 +35,7 @@ namespace Turbo.Plugins.HandH
         }
 
         public void PaintWorld(WorldLayer layer)
-		{
+        {
             var actors = Hud.Game.Actors.Where(x => x.SnoActor.Kind == ActorKind.HealthGlobe);
             foreach (var actor in actors)
             {
